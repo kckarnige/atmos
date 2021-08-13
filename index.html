@@ -1,0 +1,52 @@
+<html>
+<font face="arial">
+<head>
+<title> Atmosphere Home </title>
+<center><table width="950" ><tr><td>
+   <body bgcolor='37394C'>
+<font color="white">
+<head>
+<img src="imgs/banner.png"</img>
+
+<h2> Atmosphère is a work-in-progress customized firmware for the Nintendo Switch. </h2> </head>
+<h2>Components</h2></p>
+
+Atmosphère consists of multiple components, each of which replaces/modifies a different component of the system:</p>
+
+    Fusée: First-stage Loader, responsible for loading and validating stage 2 (custom TrustZone) plus package2 (Kernel/FIRM sysmodules), and patching them as needed. This replaces all functionality normally in Package1loader/NX Bootloader.</p>
+        Sept: Payload used to enable support for runtime key derivation on 7.0.0.</p>
+    Exosphère: Customized TrustZone, to run a customized Secure Monitor</p>
+    Thermosphère: EL2 EmuNAND support, i.e. backing up and using virtualized/redirected NAND images</p>
+    Stratosphère: Custom Sysmodule(s), both Rosalina style to extend the kernel/provide new features, and of the loader reimplementation style to hook important system actions</p>
+    Troposphère: Application-level Horizon OS patches, used to implement desirable CFW features</p>
+
+<h2>Licensing</h2></p>
+
+This software is licensed under the terms of the GPLv2, with exemptions for specific projects noted below.</p>
+
+You can find a copy of the license in the LICENSE file.</p>
+
+<h2>Exemptions:</h2></p>
+
+    The yuzu Nintendo Switch emulator and the Ryujinx Team and Contributors are exempt from GPLv2 licensing. They are permitted, each at their individual discretion, to instead license any source code authored for the Atmosphère project as either GPLv2 or later or the MIT license. In doing so, they may alter, supplement, or entirely remove the copyright notice for each file they choose to relicense. Neither the Atmosphère project nor its individual contributors shall assert their moral rights against any of the aforementioned projects. </p>
+    Nintendo is exempt from GPLv2 licensing and may (at its option) instead license any source code authored for the Atmosphère project under the Zero-Clause BSD license.</p>
+
+<h2>Credits</h2></p>
+
+Atmosphère is currently being developed and maintained by SciresM, TuxSH, hexkyz, and fincs.</p>
+In no particular order, we credit the following for their invaluable contributions:</p>
+
+    switchbrew for the libnx project and the extensive documentation, research and tool development pertaining to the Nintendo Switch.</p>
+    devkitPro for the devkitA64 toolchain and libnx support.</p>
+    ReSwitched Team for additional documentation, research and tool development pertaining to the Nintendo Switch.</p>
+    ChaN for the FatFs module.</p>
+    Marcus Geelnard for the bcl-1.2.0 library.</p>
+    naehrwert and st4rk for the original hekate project and its hwinit code base.</p>
+    CTCaer for the continued hekate project's fork and the minerva_tc project.</p>
+    m4xw for development of the emuMMC project.</p>
+    Riley for suggesting "Atmosphere" as a Horizon OS reimplementation+customization project name.</p>
+    hedgeberg for research and hardware testing.</p>
+    lioncash for code cleanup and general improvements.</p>
+    jaames for designing and providing Atmosphère's graphical resources.</p>
+    Everyone who submitted entries for Atmosphère's splash design contest.</p>
+    All those who actively contribute to the Atmosphère repository.</p>
