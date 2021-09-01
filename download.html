@@ -38,42 +38,36 @@ a:active {
 <a href="https://discordapp.com/invite/ZdqEhed" rel="nofollow"><img src="https://camo.githubusercontent.com/b4175720ede4f2621aa066ffbabb70ae30044679/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f636861742d446973636f72642d627269676874677265656e2e737667" alt="Chat on Discord" style="max-width:100%;"></a>
 </a>
 </p>
-Lastest stable release 0.19.5 </p>
+Lastest stable release 0.20.1 </p>
 
 <table border=1>
 <tr>
 <td>
 <font color="white">
-0.19.5 is Atmosphère's fifty-first official release. </p>
+  0.20.1 is Atmosphère's fifty-third official release.</p>
 
-fusee-primary was last updated in: 0.19.3. </p>
+fusee-primary was last updated in: 0.20.1. Please be sure to update fusee-primary when upgrading to 0.20.1.</p>
 
-With thanks to the @switchbrew team, Atmosphère 0.19.5 is bundled with hbl 2.4.1, and hbmenu 3.4.0.</p>
+With thanks to the @switchbrew team, Atmosphère 0.20.1 is bundled with hbl 2.4.1, and hbmenu 3.4.1.</p>
 
 The following was changed since the last release:</p>
 
-    Support was added for 12.1.0.</p>
-    LayeredFS support was added for OpenDataStorageWithProgramIndex commands.</p>
-        Certain games using newer (7.0.0+ APIs) which include multiple programs under a single title previously could not be modified.</p>
-        These are now supported as normal, and LayeredFS should have 100% compatibility again.</p>
-    A number of minor issues were fixed, including:</p>
-        The Reboot to Payload NRO was updated to allow the OS to save state prior to rebooting (thanks @AuroraWright)!</p>
-        An issue was fixed that could cause dns.mitm to fail when games requested resolution of an empty string.</p>
-        An issue was fixed that caused a memory leak in the erpt system module.</p>
-            This would eventually cause a system crash after ~540 reports were generated without rebooting.</p>
-    A number of minor improvements were made to improve mesosphere's accuracyv.</p>
+    An issue was fixed that caused severely degraded performance after wake-from-sleep on Mariko hardware.</p>
+        This was due to Mariko MTC resulting in a frequency of 1599.999MHz instead of 1600MHz.</p>
+        Due to this off-by-one, Nintendo's EMC management code failed to initialize/take over, and after wake from sleep RAM would be in a strange state.</p>
     General system stability improvements to enhance the user's experience.</p>
 
-For information on the featureset supported by 0.19, please see the official release notes.</p>
+For information on the featureset supported by 0.20, please see the official release notes.</p>
+
 </tr>
 </td>
 </table>
 <table border=1>
 <tr>
 <td>
-<a href="https://github.com/Atmosphere-NX/Atmosphere/releases/download/0.19.5/atmosphere-0.19.5-master-9df13781c+hbl-2.4.1+hbmenu-3.4.0.zip"> atmosphere-0.19.5-master-9df13781c+hbl-2.4.1+hbmenu-3.4.0.zip </a></p>
-<a href="https://github.com/Atmosphere-NX/Atmosphere/releases/download/0.19.5/atmosphere-0.19.5-master-9df13781c-WITHOUT_MESOSPHERE+hbl-2.4.1+hbmenu-3.4.0.zip"> atmosphere-0.19.5-master-9df13781c-WITHOUT_MESOSPHERE+hbl-2.4.1+hbmenu-3.4.0.zip</a></p>
-<a href="https://github.com/Atmosphere-NX/Atmosphere/releases/download/0.19.5/fusee-primary.bin">fusee-primary.bin</a></p>
+<a href="https://github.com/Atmosphere-NX/Atmosphere/releases/download/0.20.1/atmosphere-0.20.1-master-165c9261+hbl-2.4.1+hbmenu-3.4.1.zip">  atmosphere-0.20.1-master-165c9261+hbl-2.4.1+hbmenu-3.4.1.zip </a></p>
+<a href="atmosphere-0.20.1-master-165c9261-WITHOUT_MESOSPHERE+hbl-2.4.1+hbmenu-3.4.1.zip"> atmosphere-0.20.1-master-165c9261-WITHOUT_MESOSPHERE+hbl-2.4.1+hbmenu-3.4.1.zip</a></p>
+<a href="https://github.com/Atmosphere-NX/Atmosphere/releases/download/0.20.1/fusee-primary.bin"> fusee-primary.bin</a></p>
 </tr>
 
 </td>
