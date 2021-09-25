@@ -38,7 +38,7 @@ a:active {
 <a href="https://discordapp.com/invite/ZdqEhed" rel="nofollow"><img src="https://camo.githubusercontent.com/b4175720ede4f2621aa066ffbabb70ae30044679/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f636861742d446973636f72642d627269676874677265656e2e737667" alt="Chat on Discord" style="max-width:100%;"></a>
 </a>
 </p>
-Lastest stable release 1.0.0 </p>
+Lastest stable release 1.1.0 </p>
 
 <table width="90%" cellpadding="2" border="1" border=1 bordercolor="white">
 <tr>
@@ -46,44 +46,49 @@ Lastest stable release 1.0.0 </p>
 <font color="white">
 
 
-1.0.0 is Atmosphère's fifty-fourth official release.<br>
+  1.1.1 is Atmosphère's fifty-sixth official release.</p>
 
-Please be sure to update fusee when upgrading to 1.0.0. fusee-primary no longer exists, and will not work any more.<br>
+Please be sure to update fusee when upgrading to 1.1.1. fusee-primary no longer exists, and will not work any more.</p>
 
-With thanks to the @switchbrew team, Atmosphère 1.0.0 is bundled with hbl 2.4.1, and hbmenu 3.4.1.<br>
+With thanks to the @switchbrew team, Atmosphère 1.1.1 is bundled with hbl 2.4.1, and hbmenu 3.4.1.</p>
 
-The following was changed since the last release:<br>
+The following was changed since the last release:</p>
 
-    fusee was completely re-written in C++ to use the same atmosphere-libs APIs as the rest of atmosphere's code.<br>
-        The rewrite was performed with a big emphasis on ensuring a good boot speed, and generally boot should be much faster than it was previously.<br>
-            Depending on SD card/environment, boot speed may now be slightly faster than, roughly the same as, or slightly slower than when booting with hekate.<br>
-            The obvious low-hanging fruit for performance improvements has been picked, so hopefully the improved performance is to everybody's liking.<br>
-        SD card compatibility was improved: fusee should now have SD card compatibility identical to the official OS driver.<br>
-        Please Note: various components were renamed (fusee-primary.bin -> fusee.bin, fusee-secondary.bin -> package3).<br>
-            If you use another bootloader (like hekate), you may need to update your configuration to use the new layout.<br>
-        Please Note: BCT.ini no longer exists, nogc configuration has been moved to /atmosphere/config/stratosphere.ini.<br>
-            If you rely on custom nogc configuration, please be sure to update accordingly.<br>
-        Custom splash screen BMP parsing is no longer supported (as it slows down boot for 99% of users).<br>
-            To compensate for this, a script to insert a custom splash screen into a package3 binary has been added to the utilities folder of the atmosphere repository.<br>
-            The release build should be equivalent to running the following command from the root of the atmosphere repository: python utilities/insert_splash_screen.py img/splash.png fusee/package3<br>
-    A number of pending changes were made, following the end of the relevant testing periods:<br>
-        mesosphere is no longer opt-out, and stratosphere code will begin depending on its being present/in use.<br>
-        NCM is no longer opt-out.
-        The cleanup to ease the transition from < 0.19.0 to 0.19.0 has been removed.<br>
-    General system stability improvements to enhance the user's experience.<br>
+    A bug was fixed which caused some memory to leak when launching a game with mods enabled, eventually causing a crash after enough game launches without rebooting.<br>
+  General system stability improvements to enhance the user's experience.</p>
 
-For information on the featureset supported by 1.0, please see the official release notes.<br>
-  <strong>Contributors</strong>
-    @switchbrew
-          
+  And the following was changed in 1.1.0:</p>
+
+    Support was implemented for 13.0.0.<br>
+        mesosphère was updated to reflect the latest official kernel behavior.<br>
+        ncm was updated to reflect the latest official behaviors.<br>
+        erpt was updated to reflect the latest official behaviors.<br>
+            Two new services ("sprofile") were added to erpt, and have been fully reimplemented.<br>
+            Please Note: These services provide a way for settings to be pushed to consoles over the internet without system update.<br>
+                Because there appear to be no settings pushed out yet, this implementation fundamentally cannot be fully tested right now, but hopefully there are no issues once settings begin being distributed.<br>
+    The LogManager system module was reimplemented.<br>
+        This system module provides services that some games use for logging.<br>
+        Atmosphere's reimplementation supports logging to the SD card (if lm!enable_sd_card_logging is true) and to ams.TMA.<br>
+            To control the directory where logs are saved, modify the lm!sd_card_log_output_directory setting.<br>
+        Atmosphere's reimplementation is disabled by default (in order to save memory), but can be enabled by setting lm!enable_log_manager to true.<br>
+            This will allow reading over logs from games which use the services (or potentially logging from homebrew in the future), which can be useful to developers.<br>
+            Please note that when TMA is fully implemented in the future, enabling TMA will forcibly enable LogManager.<br>
+    General system stability improvements to enhance the user's experience.</p>
+
+For information on the featureset supported by 1.1, please see the official release notes.<br>
+Contributors<br>
+
+    @switchbrew<br>
+
+switchbrew <br>
 </tr>
 </td>
 </table>
 <table width="90%" cellpadding="2" border="1" border=1 ordercolor="white">
 <tr>
 <td>
-<a href="https://github.com/Atmosphere-NX/Atmosphere/releases/download/1.0.0/atmosphere-1.0.0-master-bfeba7c1+hbl-2.4.1+hbmenu-3.4.1.zip"> atmosphere-1.0.0-master-bfeba7c1+hbl-2.4.1+hbmenu-3.4.1.zip </a></p>
-<a href="https://github.com/Atmosphere-NX/Atmosphere/releases/download/1.0.0/fusee.bin"> fusee.bin</a></p>
+<a href="https://github.com/Atmosphere-NX/Atmosphere/releases/download/1.1.1/atmosphere-1.1.1-master-99c74469e+hbl-2.4.1+hbmenu-3.4.1.zip"> atmosphere-1.1.1-master-99c74469e+hbl-2.4.1+hbmenu-3.4.1.zip</a></p>
+<a href="https://github.com/Atmosphere-NX/Atmosphere/releases/download/1.1.1/fusee.bin"> fusee.bin</a></p>
 </tr>
 
 </td>
